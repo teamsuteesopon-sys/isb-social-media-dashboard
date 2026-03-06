@@ -15,8 +15,8 @@ st.markdown('Analyze past performance and predict engagement for future posts')
 
 @st.cache_data
 def load_data():
-    fb = pd.read_csv('/Users/20214/Desktop/facebook_data.csv')
-    ig = pd.read_csv('/Users/20214/Desktop/instagram_data.csv')
+    fb = pd.read_csv('facebook_data.csv')
+    ig = pd.read_csv('instagram_data.csv')
 
     fb['datetime'] = pd.to_datetime(fb['Publish time'], format='%m/%d/%Y %H:%M')
     ig['datetime'] = pd.to_datetime(ig['Publish time'], format='%m/%d/%Y %H:%M')
